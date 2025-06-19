@@ -1,85 +1,56 @@
-* 
 
 
-
+/* 🌐 General Improvements */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .main {
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(1.jpg);
     background-position: center;
     background-size: cover;
-
-    height: 109dvh;
-}
-@media (max-width:600px) {
-   .main {
-    width: 100%;
-   }
-    
+    height: 100vh;
 }
 
-@media (max-width:601px) {
-   .main {
-    width: 100%;
-   }
-    
-}
-@media (max-width:768px) {
-   .main {
-    width: 100%;
-   }
-    
-}
-@media (max-width:992px) {
-   .main {
-    width: 100%;
-   }
-    
-}
-@media (max-width:1200px) {
-   .main {
-    width: 100%;
-   }
-    
-}
 .navbar {
-    width: 1200px;
+    max-width: 1200px;
+    width: 90%;
     height: 75px;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .icon {
-    width: 200px;
-    float: left;
     height: 70px;
 }
 
 .logo {
     color: #efb8dd;
-    font-size: 35px;
+    font-size: 28px;
     font-family: Arial;
-    padding-left: 20px;
-    float: left;
-    padding-top: 10px;
+    padding: 10px 0;
 }
 
 .menu {
-    width: 400px;
-    float: left;
     height: 70px;
 }
 
 ul {
-    float: left;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: 0;
 }
 
 ul li {
     list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
+    margin: 10px 15px;
     font-size: 14px;
 }
 
@@ -96,70 +67,51 @@ ul li a:hover {
 }
 
 .search {
-    width: 330px;
-    float: left;
-    margin-left: 1000px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    margin-top: 13px;
 }
 
 .srch {
-    font-family: 'Times New Roman';
     width: 200px;
     height: 40px;
     background: transparent;
-    border: 1px solid #ffffff;
-    margin-top: 13px;
+    border: 1px solid #fff;
     color: #fff;
-    border-right: none;
-    font-size: 16px;
-    float: left;
     padding: 10px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
 }
 
 .btn {
-    width: 100px;
     height: 40px;
+    width: 100px;
     background: #efb8dd;
-    border: 2px solid #efb8dd;
-    margin-top: 13px;
     color: #fff;
-    font-size: 15px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.btn:focus {
-    outline: none;
-
-}
-
-.srch:focus {
-    outline: none;
+    border: 2px solid #efb8dd;
+    border-radius: 0 5px 5px 0;
 }
 
 .content {
-    width: 1200px;
-    height: auto;
+    max-width: 1200px;
+    width: 90%;
     margin: auto;
     color: #fff;
     position: relative;
 }
 
 .content .par {
-    padding-left: 20px;
-    padding-bottom: 25px;
+    padding: 10px 0;
     font-family: Arial;
-    letter-spacing: 1.2px;
     line-height: 30px;
+    letter-spacing: 1.2px;
 }
 
 .content h1 {
-    font-family: 'Times New Roman';
-    font-size: 50px;
-    padding-left: 20px;
-    margin-top: 9%;
+    font-size: 36px;
+    padding-top: 30px;
     letter-spacing: 2px;
 }
 
@@ -168,135 +120,148 @@ ul li a:hover {
     height: 40px;
     background: #efb8dd;
     border: none;
-    margin-bottom: 10px;
-    margin-left: 20px;
+    margin-top: 10px;
     font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
     transition: .4s ease;
 }
+
 .content .cn a {
     text-decoration: none;
     color: #000;
-    transition: .3s ease;
 }
 
 .cn:hover {
     background-color: #fff;
-    
 }
 
 .content span {
     color: #efb8dd;
-    font-size: 60px;
+    font-size: 48px;
 }
 
+/* 🌟 Responsive Form */
 .form {
-    width: 250px;
-    height: 410px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
-    position: absolute;
-    top: 200px;
-    left: 1000px;
+    width: 90%;
+    max-width: 300px;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     padding: 25px;
+    color: #fff;
+    position: relative;
+    margin: 40px auto;
 }
 
 .form h2 {
-    width: 220px;
-    font-family: sans-serif;
     text-align: center;
-    color: #efb8dd;
     font-size: 22px;
     background-color: #fff;
+    color: #efb8dd;
     border-radius: 10px;
-    margin: 2px;
-    padding: 8px;
+    padding: 10px;
+}
 
+.form input,
+.btnn {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 .form input {
-    width: 240px;
-    height: 35px;
     background: transparent;
+    border: none;
     border-bottom: 1px solid #efb8dd;
-    border-top: none;
-    border-right: none;
-    border-left: none;
     color: #fff;
-    font-size: 15px;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    font-family: sans-serif;
-}
-
-.form input:focus {
-    outline: none;
-}
-
-::placeholder {
-    color: #fff;
-    font-family: Arial;
+    padding: 5px;
 }
 
 .btnn {
-    width: 240px;
-    height: 40px;
     background: #efb8dd;
-    border: none;
-    margin-top: 30px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
     color: #fff;
-    transition: 0.4s ease;
-
+    border: none;
+    cursor: pointer;
 }
 
 .btnn:hover {
     background: #fff;
-    
     color: #efb8dd;
-}
-
-.btnn a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
 }
 
 .form .link {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    padding-top: 20px;
     text-align: center;
+    margin-top: 15px;
 }
 
 .form .link a {
-    text-decoration: none;
     color: #efb8dd;
-}
-
-.liw {
-    padding-top: 15px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-.icon a {
     text-decoration: none;
-    color: #efb8dd;
 }
 
 .icon ion-icon {
+    font-size: 24px;
+    margin: 0 5px;
     color: #fff;
-    font-size: 25px;
-    padding-left: 10px;
-    padding-top: 5px;
     transition: 0.3s ease;
-
 }
 
 .icon ion-icon:hover {
     color: #efb8dd;
+}
+
+/* ✅ Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .search {
+        margin: 10px 0 0 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .content h1 {
+        font-size: 30px;
+    }
+
+    .content .par {
+        font-size: 14px;
+    }
+
+    .form {
+        top: auto;
+        left: auto;
+        position: static;
+    }
+
+    .menu, ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .content span {
+        font-size: 36px;
+    }
+
+    .srch {
+        width: 60%;
+    }
+
+    .btn {
+        width: 40%;
+    }
 }
